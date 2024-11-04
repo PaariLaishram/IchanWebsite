@@ -86,11 +86,11 @@
  }
 
  .home-container {
-   margin-top: 10rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 8rem
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem
  }
 
  .home-content h3 {
@@ -171,6 +171,7 @@
     font-weight: 600;
     transition: 0.3s ease;
     cursor: pointer;
+    margin-top: 2rem;
  }
 
  .btn:hover {
@@ -317,164 +318,213 @@
  }
 
  .bar .progress-line span {
-   height: 100%;
-   position: absolute;
-   border-radius: 10px;
-   background: white;
-  
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background: white;
+
  }
 
- .bar .progress-line.html span{
-   width: 80%;
-   background-color: gold;
+ .bar .progress-line.html span {
+    width: 80%;
+    background-color: gold;
  }
 
 
- .bar .progress-line.css span{
-   width: 75%;
-   background-color: gold;
+ .bar .progress-line.css span {
+    width: 75%;
+    background-color: gold;
  }
 
- .bar .progress-line.css span{
-   width: 75%;
-   background-color: rgb(58,58,255);
+ .bar .progress-line.css span {
+    width: 75%;
+    background-color: rgb(58, 58, 255);
  }
 
- .bar .progress-line.python span{
-   width: 100%;
-   background-color: lightskyblue;
+ .bar .progress-line.python span {
+    width: 100%;
+    background-color: lightskyblue;
  }
 
- .bar .progress-line.data-analysis span{
-   width: 100%;
-   background-color: blue;
+ .bar .progress-line.data-analysis span {
+    width: 100%;
+    background-color: blue;
  }
 
  .timeline-section {
-   min-height: 80vh;
-   padding: 50px 15px;
-   background: var(--bg-color);
-   font-size: 1.4rem;
+    min-height: 80vh;
+    padding: 50px 15px;
+    background: var(--bg-color);
+    font-size: 1.4rem;
  }
+
  .timeline-section h2 {
-   margin-bottom: 5rem;
-   font-size: 6rem;
-   text-align: center;
-}
+    margin-bottom: 5rem;
+    font-size: 6rem;
+    text-align: center;
+ }
 
-.section-intro-para {
-   font-size: 1.9rem;
-}
+ .section-intro-para {
+    font-size: 1.9rem;
+ }
 
-#timeline-para{
-   margin-left: auto;
-   margin-right: auto;
-   width: 82%;
-}
+ #timeline-para {
+    margin-left: auto;
+    margin-right: auto;
+    width: 82%;
+ }
 
-.timeline-items {
-   max-width: 1000px;
-   margin: auto;
+ .timeline-items {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 50px;
+ }
+
+ .timeline-items::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: var(--main-color);
+    left: calc(50% - 2.5px);
+    /* Centers the line */
+ }
+
+ .timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+ }
+
+ .timeline-item:last-child {
+    margin-bottom: 0;
+ }
+
+ /* Positioning for odd and even timeline items */
+ .timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+ }
+
+ .timeline-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+    text-align: left;
+ }
+
+ .timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: calc(50% - 10.5px);
+    /* Centers the dot */
+    border-radius: 50%;
+    top: 10px;
+ }
+
+ .timeline-date {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+ }
+
+ .timeline-content {
+    background: var(--main-color);
+    padding: 30px;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+ }
+
+ .timeline-content:hover {
+    transform: scale(1.05);
+ }
+
+ .timeline-content h3 {
+    font-size: 20px;
+    color: white;
+    opacity: 0.8;
+    font-weight: 400;
+    line-height: 22px;
+ }
+
+
+ .projects .heading {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.2rem;
+ }
+
+ .projects-container {
+    padding: 25px 50px;
+ }
+
+ .projects-container>* {
+    font-size: 1.9rem;
+ }
+
+ .project-heading {
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+ }
+
+ .project-list-item {
+    margin-top: 25px;
+ }
+
+ .project-list-item .project-tech {
+    margin: 8px 0px;
+ }
+
+ .footer {
+    background: #242323;
+    width: 100%;
+    padding: 6rem 9%;
+    backdrop-filter: blur(10px);
+    display: flex;
+      gap: 10rem;
+ }
+
+ .footer-contacts h3{
+   font-size: 3.5rem;
+ }
+
+ .footer-connect h3{
+   font-size: 3.5rem;
+ }
+
+ .footer-icons {
+   display: inline-flex;
+ justify-content: center;
+ align-items: center;
+ width: 4rem;
+ height: 4rem;
+ background: transparent;
+ border: 0.2rem solid var(--main-color);
+ font-size: 2rem;
+ border-radius: 50%;
+ color: var(--main-color);
+ }
+
+ .contact-links{
    display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-   position: relative;
-   margin-top: 50px;
-}
+   gap: 1.4rem;
+   margin: 2rem 0;
+ }
 
-.timeline-items::before {
-   content: '';
-   position: absolute;
-   width: 5px;
-   height: 100%;
-   background: var(--main-color);
-   left: calc(50% - 2.5px); /* Centers the line */
-}
-
-.timeline-item {
-   margin-bottom: 40px;
-   width: 100%;
-   position: relative;
-}
-
-.timeline-item:last-child {
-   margin-bottom: 0;
-}
-
-/* Positioning for odd and even timeline items */
-.timeline-item:nth-child(odd) {
-   padding-right: calc(50% + 30px);
-   text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-   padding-left: calc(50% + 30px);
-   text-align: left;
-}
-
-.timeline-dot {
-   height: 21px;
-   width: 21px;
-   background-color: var(--main-color);
-   position: absolute;
-   left: calc(50% - 10.5px); /* Centers the dot */
-   border-radius: 50%;
-   top: 10px;
-}
-
-.timeline-date {
-   font-size: 20px;
-   font-weight: 800;
-   color: white;
-   margin: 6px 0 15px;
-}
-
-.timeline-content {
-   background: var(--main-color);
-   padding: 30px;
-   border-radius: 1em;
-   cursor: pointer;
-   transition: 0.3s ease-in-out;
-}
-
-.timeline-content:hover {
-   transform: scale(1.05);
-}
-
-.timeline-content h3 {
-   font-size: 20px;
-   color: white;
-   opacity: 0.8;
-   font-weight: 400;
-   line-height: 22px;
-}
-
-
-.projects .heading{
-   text-align: center;
-   font-size: 6rem;
-   margin-top: 4rem;
-   margin-bottom: 2.5rem;
-   letter-spacing: 0.2rem;
-}
-
-.projects-container {
-   padding: 25px 50px;
-}
-
-.projects-container > * {
+ .contact-links p {
+   color: var(--main-color);
    font-size: 1.9rem;
-}
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+ }
 
-.project-heading {
-   margin-bottom: 1.2rem;
-   font-weight: 700;
-}
-
-.project-list-item{
-   margin-top: 25px;
-}
-
-.project-list-item .project-tech {
-   margin:8px 0px;
-}
+ 
